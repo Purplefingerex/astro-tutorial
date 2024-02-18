@@ -1,0 +1,18 @@
+---
+import Navigation from "../components/Navigation.astro";
+import Hamburger from "../components/Hamburger.astro";
+const { title } = Astro.props;
+---
+
+<style>
+	h1 {
+		color: rgb(69, 23, 122);
+	}
+</style>
+<header>
+	<nav>
+		<h1>{title}</h1>
+		<Hamburger />
+		<Navigation />
+	</nav>
+</header>

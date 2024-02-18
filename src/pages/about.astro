@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const pageTitle = "About Me";
@@ -30,10 +30,6 @@ const textCase = "uppercase";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 		<style define:vars={{ skillColor, fontWeigth, textCase }}>
-			h1 {
-				color: purple;
-				font-size: 4rem;
-			}
 			.skill {
 				color: green;
 				color: var(--skillColor);
@@ -42,9 +38,8 @@ const textCase = "uppercase";
 			}
 		</style>
 	</head>
-	<>
-		<h1>{pageTitle}</h1>
-		<Navigation />
+	<body>
+		<Header title="About Me" />
 
 		<h2>... and my new Astro site!</h2>
 
@@ -90,6 +85,8 @@ const textCase = "uppercase";
 			)
 		}
 		<Footer />
-	</>
-
+		<script>
+			import "../scripts/menu.js";
+		</script>
+	</body>
 </html>
