@@ -1,7 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import Hamburger from "../components/Hamburger.astro";
-const { title } = Astro.props;
+import ThemeIcon from "../components/ThemeIcon.astro";
 ---
 
 <style>
@@ -11,8 +11,8 @@ const { title } = Astro.props;
 </style>
 <header>
 	<nav>
-		<h1>{title}</h1>
 		<Hamburger />
+		<ThemeIcon />
 		<Navigation />
 	</nav>
 </header>
